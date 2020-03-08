@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A2CB79C3241443290012FE1A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CB79C2241443290012FE1A /* FeedViewController.swift */; };
 		A2CB79C52414433F0012FE1A /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CB79C42414433F0012FE1A /* FeedViewController.storyboard */; };
+		A2CC91312414FC39003B8F50 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC91302414FC39003B8F50 /* NetworkService.swift */; };
+		A2CC91332414FD45003B8F50 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC91322414FD45003B8F50 /* API.swift */; };
 		A2DA42B024117FA900DF51C6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA42AF24117FA900DF51C6 /* AuthService.swift */; };
 		A2DA42B3241181B400DF51C6 /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DA42B2241181B400DF51C6 /* AuthViewController.storyboard */; };
 		A2E361E5240DA4A200CA9DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E361E4240DA4A200CA9DD3 /* AppDelegate.swift */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		A2CB79C2241443290012FE1A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		A2CB79C42414433F0012FE1A /* FeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
+		A2CC91302414FC39003B8F50 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A2CC91322414FD45003B8F50 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A2DA42AF24117FA900DF51C6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A2DA42B2241181B400DF51C6 /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
 		A2E361E1240DA4A200CA9DD3 /* MyFeedNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFeedNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				A2DA42AF24117FA900DF51C6 /* AuthService.swift */,
+				A2CC91302414FC39003B8F50 /* NetworkService.swift */,
+				A2CC91322414FD45003B8F50 /* API.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -228,7 +234,9 @@
 				A2E361E5240DA4A200CA9DD3 /* AppDelegate.swift in Sources */,
 				A2CB79C3241443290012FE1A /* FeedViewController.swift in Sources */,
 				A2E361E7240DA4A200CA9DD3 /* SceneDelegate.swift in Sources */,
+				A2CC91312414FC39003B8F50 /* NetworkService.swift in Sources */,
 				A2DA42B024117FA900DF51C6 /* AuthService.swift in Sources */,
+				A2CC91332414FD45003B8F50 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +383,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jemzza.MyFeedNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -398,7 +406,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jemzza.MyFeedNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
