@@ -13,6 +13,7 @@
 		A2CC91332414FD45003B8F50 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC91322414FD45003B8F50 /* API.swift */; };
 		A2CC9136241552C0003B8F50 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC9135241552C0003B8F50 /* FeedResponse.swift */; };
 		A2CC913824155643003B8F50 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC913724155643003B8F50 /* NetworkDataFetcher.swift */; };
+		A2CC913B2415636D003B8F50 /* UIViewController + Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC913A2415636D003B8F50 /* UIViewController + Storyboard.swift */; };
 		A2DA42B024117FA900DF51C6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA42AF24117FA900DF51C6 /* AuthService.swift */; };
 		A2DA42B3241181B400DF51C6 /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DA42B2241181B400DF51C6 /* AuthViewController.storyboard */; };
 		A2E361E5240DA4A200CA9DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E361E4240DA4A200CA9DD3 /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 		A2CC91322414FD45003B8F50 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A2CC9135241552C0003B8F50 /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
 		A2CC913724155643003B8F50 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		A2CC913A2415636D003B8F50 /* UIViewController + Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Storyboard.swift"; sourceTree = "<group>"; };
 		A2DA42AF24117FA900DF51C6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A2DA42B2241181B400DF51C6 /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
 		A2E361E1240DA4A200CA9DD3 /* MyFeedNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFeedNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A2CC913924156352003B8F50 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A2CC913A2415636D003B8F50 /* UIViewController + Storyboard.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		A2DA42B124117FB100DF51C6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 		A2E361E3240DA4A200CA9DD3 /* MyFeedNews */ = {
 			isa = PBXGroup;
 			children = (
+				A2CC913924156352003B8F50 /* Helpers */,
 				A2E361E4240DA4A200CA9DD3 /* AppDelegate.swift */,
 				A2E361E6240DA4A200CA9DD3 /* SceneDelegate.swift */,
 				A2CB79C7241443E90012FE1A /* AuthViewController */,
@@ -245,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2CC9136241552C0003B8F50 /* FeedResponse.swift in Sources */,
+				A2CC913B2415636D003B8F50 /* UIViewController + Storyboard.swift in Sources */,
 				A2E361E9240DA4A200CA9DD3 /* AuthViewController.swift in Sources */,
 				A2E361E5240DA4A200CA9DD3 /* AppDelegate.swift in Sources */,
 				A2CB79C3241443290012FE1A /* FeedViewController.swift in Sources */,
