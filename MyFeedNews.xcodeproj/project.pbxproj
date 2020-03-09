@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A27E84692416D3CF0057F350 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27E84682416D3CF0057F350 /* WebImageView.swift */; };
 		A2CC91312414FC39003B8F50 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC91302414FC39003B8F50 /* NetworkService.swift */; };
 		A2CC91332414FD45003B8F50 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC91322414FD45003B8F50 /* API.swift */; };
 		A2CC9136241552C0003B8F50 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC9135241552C0003B8F50 /* FeedResponse.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A27E84682416D3CF0057F350 /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 		A2CC91302414FC39003B8F50 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		A2CC91322414FD45003B8F50 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A2CC9135241552C0003B8F50 /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				A2CC913A2415636D003B8F50 /* UIViewController + Storyboard.swift */,
+				A27E84682416D3CF0057F350 /* WebImageView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2CC9136241552C0003B8F50 /* FeedResponse.swift in Sources */,
+				A27E84692416D3CF0057F350 /* WebImageView.swift in Sources */,
 				A2CC914624156759003B8F50 /* NewsFeedRouter.swift in Sources */,
 				A2CC914724156759003B8F50 /* NewsFeedModels.swift in Sources */,
 				A2CC913B2415636D003B8F50 /* UIViewController + Storyboard.swift in Sources */,
