@@ -9,29 +9,30 @@
 import UIKit
 
 protocol NewsFeedBusinessLogic {
-  func makeRequest(request: NewsFeed.Model.Request.RequestType)
+    func makeRequest(request: NewsFeed.Model.Request.RequestType)
 }
 
 class NewsFeedInteractor: NewsFeedBusinessLogic {
-
-  var presenter: NewsFeedPresentationLogic?
-  var service: NewsFeedService?
-  
-  func makeRequest(request: NewsFeed.Model.Request.RequestType) {
-    if service == nil {
-      service = NewsFeedService()
-    }
     
-    switch request {
+    var presenter: NewsFeedPresentationLogic?
+    var service: NewsFeedService?
+    
+    private var fetcher: DataFetcher = NetworkDataFetcher(networking: NetworkService())
+    
+    func makeRequest(request: NewsFeed.Model.Request.RequestType) {
+        if service == nil {
+            service = NewsFeedService()
+        }
         
-    case .some:
-        print(".some Interactor")
-        presenter?.presentData(response: .some)
-    case .getFeed:
-        print(".getFeed Interactor")
-        presenter?.presentData(response: .presentNewsFeed)
+        switch request {
+            
+        case .getNewsFeed:
+            fetcher.getFeed { [weak self] (feedResponse) in
+                guard let feedResponse = feedResponse else { return }
+                self?.presenter?.presentData(response: .presentNewsFeed(feed: feedResponse))
+            }
+        }
+        
     }
     
-  }
-  
 }
