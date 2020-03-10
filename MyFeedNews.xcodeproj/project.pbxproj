@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A256BA552417B00B0034469B /* NewsFeedCellLayoutCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A256BA542417B00B0034469B /* NewsFeedCellLayoutCalculator.swift */; };
+		A256BA572417C0D30034469B /* String + Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = A256BA562417C0D30034469B /* String + Height.swift */; };
 		A27E84692416D3CF0057F350 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27E84682416D3CF0057F350 /* WebImageView.swift */; };
 		A2CC91312414FC39003B8F50 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC91302414FC39003B8F50 /* NetworkService.swift */; };
 		A2CC91332414FD45003B8F50 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC91322414FD45003B8F50 /* API.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A256BA542417B00B0034469B /* NewsFeedCellLayoutCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCellLayoutCalculator.swift; sourceTree = "<group>"; };
+		A256BA562417C0D30034469B /* String + Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Height.swift"; sourceTree = "<group>"; };
 		A27E84682416D3CF0057F350 /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 		A2CC91302414FC39003B8F50 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		A2CC91322414FD45003B8F50 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 			children = (
 				A2CC913A2415636D003B8F50 /* UIViewController + Storyboard.swift */,
 				A27E84682416D3CF0057F350 /* WebImageView.swift */,
+				A256BA562417C0D30034469B /* String + Height.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				A2CC914E2415945F003B8F50 /* NewsFeedCell.swift */,
+				A256BA542417B00B0034469B /* NewsFeedCellLayoutCalculator.swift */,
 				A2CC9150241594C4003B8F50 /* NewsFeedCell.xib */,
 			);
 			path = Cell;
@@ -292,12 +298,14 @@
 				A27E84692416D3CF0057F350 /* WebImageView.swift in Sources */,
 				A2CC914624156759003B8F50 /* NewsFeedRouter.swift in Sources */,
 				A2CC914724156759003B8F50 /* NewsFeedModels.swift in Sources */,
+				A256BA552417B00B0034469B /* NewsFeedCellLayoutCalculator.swift in Sources */,
 				A2CC913B2415636D003B8F50 /* UIViewController + Storyboard.swift in Sources */,
 				A2E361E9240DA4A200CA9DD3 /* AuthViewController.swift in Sources */,
 				A2E361E5240DA4A200CA9DD3 /* AppDelegate.swift in Sources */,
 				A2E361E7240DA4A200CA9DD3 /* SceneDelegate.swift in Sources */,
 				A2CC91312414FC39003B8F50 /* NetworkService.swift in Sources */,
 				A2CC913824155643003B8F50 /* NetworkDataFetcher.swift in Sources */,
+				A256BA572417C0D30034469B /* String + Height.swift in Sources */,
 				A2DA42B024117FA900DF51C6 /* AuthService.swift in Sources */,
 				A2CC914424156759003B8F50 /* NewsFeedPresenter.swift in Sources */,
 				A2CC914524156759003B8F50 /* NewsFeedWorker.swift in Sources */,

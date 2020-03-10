@@ -16,11 +16,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wL4-8N-l9f" userLabel="Card View">
-                        <rect key="frame" x="7" y="4" width="401" height="239"/>
+                        <rect key="frame" x="8" y="0.0" width="398" height="239"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7QY-fd-agu" userLabel="Top View">
-                                <rect key="frame" x="8" y="10" width="388" height="44"/>
+                                <rect key="frame" x="8" y="10" width="382" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FBL-Ie-FGZ" customClass="WebImageView" customModule="MyFeedNews" customModuleProvider="target">
@@ -28,14 +28,14 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rG-yp-bB1">
-                                        <rect key="frame" x="52" y="3" width="328" height="17"/>
+                                        <rect key="frame" x="52" y="3" width="322" height="17"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItH-Hb-GOC">
-                                        <rect key="frame" x="52" y="23" width="328" height="17"/>
+                                        <rect key="frame" x="52" y="23" width="322" height="17"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.47926288839999998" green="0.50936746600000005" blue="0.54118204120000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -44,14 +44,18 @@
                                 </subviews>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXC-eJ-66q">
-                                <rect key="frame" x="9" y="62" width="383" height="24"/>
+                                <rect key="frame" x="8" y="62" width="382" height="24"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xs3-hJ-QaU" customClass="WebImageView" customModule="MyFeedNews" customModuleProvider="target">
+                                <rect key="frame" x="8" y="94" width="380" height="75"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hVI-5d-xYw" userLabel="Bottom View">
-                                <rect key="frame" x="5" y="179" width="391" height="53"/>
+                                <rect key="frame" x="5" y="179" width="388" height="53"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EWa-0u-ej2">
@@ -106,7 +110,7 @@
                                         </subviews>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="psZ-WG-PAB">
-                                        <rect key="frame" x="311" y="0.0" width="80" height="55"/>
+                                        <rect key="frame" x="308" y="0.0" width="80" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="oIb-Sz-SKB">
@@ -124,16 +128,13 @@
                                     </view>
                                 </subviews>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xs3-hJ-QaU" customClass="WebImageView" customModule="MyFeedNews" customModuleProvider="target">
-                                <rect key="frame" x="9" y="96" width="384" height="75"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="bottomView" destination="hVI-5d-xYw" id="mDc-ET-6tG"/>
                 <outlet property="cardView" destination="wL4-8N-l9f" id="l5R-PW-9vQ"/>
                 <outlet property="commentsLabel" destination="1E0-ds-ZD7" id="x8d-21-B6v"/>
                 <outlet property="dateLabel" destination="ItH-Hb-GOC" id="32g-Vt-CoC"/>
