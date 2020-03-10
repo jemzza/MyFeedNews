@@ -32,6 +32,7 @@ struct FeedItem: Decodable {
 
 struct Attachment: Decodable {
     let photo: Photo?
+    //video gif...
 }
 
 struct Photo: Decodable {
