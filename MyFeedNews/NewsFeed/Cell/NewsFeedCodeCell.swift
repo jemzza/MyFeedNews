@@ -8,9 +8,16 @@
 
 import UIKit
 
+// передаем в controller
+protocol NewsFeedCodeCellDelegate: class {
+    func revealPost(for cell: NewsFeedCodeCell)
+}
+
 final class NewsFeedCodeCell: UITableViewCell {
     
     static let reuseId = "NewsFeedCodeCell"
+    
+    weak var delegate: NewsFeedCodeCellDelegate?
     
     // First layer
     let cardView: UIView = {
@@ -33,6 +40,16 @@ final class NewsFeedCodeCell: UITableViewCell {
         label.numberOfLines = 0
         label.font = Constants.postLabelFont
         return label
+    }()
+    
+    let moreTextButton: UIButton = {
+        let button = UIButton()
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        button.setTitleColor(#colorLiteral(red: 0.4, green: 0.6235294118, blue: 0.831372549, alpha: 1), for: .normal)
+        button.contentHorizontalAlignment = .left
+        button.contentVerticalAlignment = .center
+        button.setTitle("Показать полность...", for: .normal)
+        return button
     }()
     
     let postImageView: WebImageView = {
@@ -160,8 +177,16 @@ final class NewsFeedCodeCell: UITableViewCell {
         return label
     }()
     
+    override func prepareForReuse() {
+        iconImageView.set(imageURL: nil)
+        postImageView.set(imageURL: nil)
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        iconImageView.layer.cornerRadius = Constants.topViewHeight / 2
+        iconImageView.clipsToBounds = true
         
         backgroundColor = .clear
         selectionStyle = .none
@@ -169,11 +194,22 @@ final class NewsFeedCodeCell: UITableViewCell {
         cardView.layer.cornerRadius = 10
         cardView.clipsToBounds = true
         
+        moreTextButton.addTarget(self, action: #selector(moreTextButtonTouch), for: .touchUpInside)
+        
         overlayFirstLayer()
         overlaySecondLayer()
         overlayThirdLayerOnTopView()
         overlayThirdLayerOnBottomView()
         overlayFourthLayerOnBottomViewViews()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc
+    func moreTextButtonTouch() {
+        delegate?.revealPost(for: self)
     }
     
     private func overlayFirstLayer() {
@@ -184,6 +220,7 @@ final class NewsFeedCodeCell: UITableViewCell {
     private func overlaySecondLayer() {
         cardView.addSubview(topView)
         cardView.addSubview(postLabel)
+        cardView.addSubview(moreTextButton)
         cardView.addSubview(postImageView)
         cardView.addSubview(bottomView)
         
@@ -245,32 +282,6 @@ final class NewsFeedCodeCell: UITableViewCell {
                          size: CGSize(width: Constants.bottomViewViewWidth, height: Constants.bottomViewViewHeight))
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func set(viewModel: FeedCellViewModel) {
-        
-        iconImageView.set(imageURL: viewModel.iconUrlString)
-        nameLabel.text = viewModel.name
-        dateLabel.text = viewModel.date
-        postLabel.text = viewModel.text
-        likesLabel.text = viewModel.likes
-        commentsLabel.text = viewModel.comments
-        sharesLabel.text = viewModel.shares
-        viewsLabel.text = viewModel.views
-        postLabel.frame = viewModel.sizes.postLabelFrame
-        postImageView.frame = viewModel.sizes.attacmentFrame
-        bottomView.frame = viewModel.sizes.bottomViewFrame
-        
-        if let photoAttachment = viewModel.photoAttachment {
-            postImageView.set(imageURL: photoAttachment.photoUrlString)
-            postImageView.isHidden = false
-        } else {
-            postImageView.isHidden = true
-        }
-    }
-    
     private func overlayFourthLayerOnBottomViewViews() {
         likesView.addSubview(likesImage)
         likesView.addSubview(likesLabel)
@@ -300,5 +311,28 @@ final class NewsFeedCodeCell: UITableViewCell {
         label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         label.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 4).isActive = true
         label.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    }
+    
+    func set(viewModel: FeedCellViewModel) {
+        
+        iconImageView.set(imageURL: viewModel.iconUrlString)
+        nameLabel.text = viewModel.name
+        dateLabel.text = viewModel.date
+        postLabel.text = viewModel.text
+        likesLabel.text = viewModel.likes
+        commentsLabel.text = viewModel.comments
+        sharesLabel.text = viewModel.shares
+        viewsLabel.text = viewModel.views
+        postLabel.frame = viewModel.sizes.postLabelFrame
+        postImageView.frame = viewModel.sizes.attacmentFrame
+        bottomView.frame = viewModel.sizes.bottomViewFrame
+        moreTextButton.frame = viewModel.sizes.moreTextButtonFrame
+        
+        if let photoAttachment = viewModel.photoAttachment {
+            postImageView.set(imageURL: photoAttachment.photoUrlString)
+            postImageView.isHidden = false
+        } else {
+            postImageView.isHidden = true
+        }
     }
 }
