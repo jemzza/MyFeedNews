@@ -32,7 +32,27 @@ struct FeedItem: Decodable {
 
 struct Attachment: Decodable {
     let photo: Photo?
-    //video gif...
+    let audio: Audio?
+//    let video: Video?
+//    let link: Link?
+//    let poll: Poll?
+//    let album: Album?
+//    let sticker: Sticker?????
+}
+
+struct Audio: Decodable {
+    let id: Int
+    let ownerId: Int
+    let artist: String
+    let title: String
+    let duration: Int
+    let url: String
+//    let lyricsId: Int
+//    let albumId: Int?
+//    let genreId: Int?
+//    let date: Int
+//    let noSearch: Int
+//    let isHq: Int
 }
 
 struct Photo: Decodable {
