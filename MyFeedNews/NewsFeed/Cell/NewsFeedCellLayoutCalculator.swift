@@ -17,7 +17,7 @@ struct Sizes: FeedCellSizes {
 }
 
 protocol FeedCellLayoutCalculatorProtocol {
-    func sizes(text: String?, photoAttachment: FeedCellPhotoAttachmentViewModel?) -> FeedCellSizes
+    func sizes(text: String?, photoAttachment: FeedCellPhotoAttachmentViewModel?, isFullSizedPost: Bool) -> FeedCellSizes
 }
 
 final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
@@ -28,7 +28,7 @@ final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
         self.screenWidth = screenWidth
     }
     
-    func sizes(text: String?, photoAttachment: FeedCellPhotoAttachmentViewModel?) -> FeedCellSizes {
+    func sizes(text: String?, photoAttachment: FeedCellPhotoAttachmentViewModel?, isFullSizedPost: Bool) -> FeedCellSizes {
         
         var showMoreTextButton = false
         
@@ -43,8 +43,8 @@ final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
             let width = cardViewWidth - Constants.postLabelInsets.left - Constants.postLabelInsets.right
             var height = text.height(width: width, font: Constants.postLabelFont)
             
-            let limiHeight = Constants.postLabelFont.lineHeight * Constants.minifiedPostLimitLines
-            if height > limiHeight {
+            let limitHeight = Constants.postLabelFont.lineHeight * Constants.minifiedPostLimitLines
+            if !isFullSizedPost && height > limitHeight {
                 height = Constants.postLabelFont.lineHeight * Constants.minifiedPostLines
                 showMoreTextButton = true
             }

@@ -68,6 +68,9 @@ class NewsFeedViewController: UIViewController, NewsFeedDisplayLogic, NewsFeedCo
     
     func revealPost(for cell: NewsFeedCodeCell) {
         print("TAKOI KEK")
+        guard let indexPath = table.indexPath(for: cell) else { return }
+        let cellViewModel = feedViewModel.cells[indexPath.row]
+        interactor?.makeRequest(request: .revealPostId(postId: cellViewModel.postId))
     }
     
 }
@@ -82,7 +85,7 @@ extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: NewsFeedCell.reuseId, for: indexPath) as! NewsFeedCell
         let cell = tableView.dequeueReusableCell(withIdentifier: NewsFeedCodeCell.reuseId, for: indexPath) as! NewsFeedCodeCell
         let cellViewModel = feedViewModel.cells[indexPath.row]
-        cell.set(viewModel: cellViewModel)
+        cell.set(viewModel: cellViewModel) // there is no postId
         // Кто собирается реализовывать этот делегат? О: ячейка!!
         cell.delegate = self
         return cell
@@ -92,6 +95,13 @@ extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource {
         let cellViewModel = feedViewModel.cells[indexPath.row]
         let height = cellViewModel.sizes.totalHeight
         return height
-//        return 212
     }
+    
+    /*
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        let cellViewModel = feedViewModel.cells[indexPath.row]
+        let height = cellViewModel.sizes.totalHeight
+        return height
+    }
+    */
 }
